@@ -1,0 +1,68 @@
+form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+  
+input{
+    display: block;
+    margin-top: 10px;   
+}
+
+
+input:focus {
+    outline: none;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+  
+.form-control label {
+    font-weight: bold;
+}
+  
+.form-control input, .form-control button {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 0.6rem 0;
+    background-color: #fafafa;
+}
+
+.register-form input[type="submit"], .register-form button{
+    background-color: #565151;
+    color: #fff;
+    opacity: 0.8;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.4rem;
+    max-width: 300px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: 0.4s;
+    margin-top: 2.2rem;
+}
+
+.register-form input[type="submit"]:hover{
+    opacity: 1;
+}
+.register-form button:hover{
+    opacity: 1;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+#input_gerado{
+    background-color: #75b43a;
+}
+
+
+
+
+

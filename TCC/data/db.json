@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Noah Vinicius Aguiar Moura dos santos",
+      "email": "aguiar.nv@icloud.com",
+      "token": "v7)6Se]+.6xf",
+      "id": 1
+    },
+    {
+      "name": "Caroline Sanitá de Oliveira",
+      "email": "caroline.sanita12@gmail.com",
+      "token": "6{1z#fFe#sgX",
+      "id": 2
+    },
+    {
+      "name": "Caio Abreu de Souza",
+      "email": "caio@hotmail.com",
+      "token": "9(.XsQ5Tcz1Q",
+      "id": 3
+    }
+  ]
+}
