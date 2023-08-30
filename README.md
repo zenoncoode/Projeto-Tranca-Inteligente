@@ -2,7 +2,7 @@
 Projeto de TCC - Construindo um sistema de tranca inteligente com verificação por QR Code
 
 #DEPENDÊNCIAS
-Instalar Node.js juntamente com o gerenciador de pacotes npm através do link https://nodejs.org/dist/v20.5.1/node-v20.5.1-x64.msi
+Instalar Node.js juntamente com o gerenciador de pacotes npm através do link [(https://nodejs.org/en)](https://nodejs.org/en/download/current)
 
 #CONFIGURANDO O PROJETO (JSON SERVER)
 -Abra o terminal integrado do VS Code do diretório TCC (caso não abra em TCC, só mude o diretório com o comando cd TCC)
