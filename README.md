@@ -12,8 +12,8 @@ Instalar Node.js juntamente com o gerenciador de pacotes npm através do link [(
 - Após a instalação, digite o comando npm run server
 
 # CONFIGURANDO O PROJETO (RODANDO A APLICAÇÃO)
-- Abra mais um terminal integrado do VS Code do diretório TCC (caso não abra em TCC, só mude o diretório com o comando cd TCC
-  - obs: o primeiro terminal vamos deixar rodando apenas para o "servidor", então vamos preferencialmente rodar a aplicação em um terminal separado)
+- Abra mais um terminal integrado do VS Code do diretório TCC (caso não abra em TCC, só mude o diretório com o comando cd TCC)
+  - obs: o primeiro terminal vamos deixar rodando apenas para o "servidor", então vamos preferencialmente rodar a aplicação em um terminal separado
 - Digite o comando npm run dev
 - Agora temos nosso link que abre o navegador com a nossa aplicação rodando. Clique em cima do link com o mouse enquanto pressiona o crtl e o App abrirá
  no seu navegador padrão!
