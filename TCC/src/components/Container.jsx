@@ -5,7 +5,7 @@ import { useFetch } from '../hooks/useFetch';
 import { Token } from '../hooks/Token';
 
 
-const url = "http://localhost:3000/users" //link do servidor
+const url = "http://192.168.1.106:3000/users" //link do servidor
 
 const Container = ({ user }) => {  
     const [name, setName] = useState(user ? user.name : ""); //para a variavel name setada como vazio no inicio, caso name seja diferente de vazio, temos um novo estado
@@ -31,7 +31,7 @@ const Container = ({ user }) => {
         token
       };
 
-      const res = await fetch("http://localhost:3000/users", {
+      const res = await fetch("http://192.168.1.106:3000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -18,7 +18,7 @@ const getNumber = () =>{
 }
 
 const getSymbol = () =>{
-    const symbols = "(){}[]=<>,.!@#%*+-"
+    const symbols = "_"
     return symbols[Math.floor(Math.random()*symbols.length)]
     //retorna um dos simbolos da string symbols de forma aleatoria
 }
