@@ -10,7 +10,7 @@ const char* ssid = "MASSINHA DE EVA";
 const char* password =  "senhaarea2020";
 
 //URL servidor.
-String serverName = "http://192.168.1.106:3000/users?token=";
+String serverName = "http://192.168.1.104:3000/users?token=";
 
 //Objetos de camera
 ESPino32CAM cam;   //Objeto para captura de imagem
@@ -35,11 +35,12 @@ ESPino32QRCode qr; //Objeto para decoficação da imagem
 #define HREF_GPIO_NUM     23
 #define PCLK_GPIO_NUM     22
 #define flash 4
+
  
  
 //Variável para limitar o print no monitor serial se caso o QR Code ainda estiver na frente da câmera
 int trava;
-int rele = 12;
+int rele = 13;
 
  
 void setup() {
@@ -47,7 +48,11 @@ void setup() {
   Serial.begin(115200);
 
   pinMode(rele, OUTPUT);
+  digitalWrite(rele, LOW);
+  pinMode(rele, INPUT_PULLUP);
+
   digitalWrite(flash, LOW); //Turn on
+  
   //Connectar no wifi.
   WiFi.begin(ssid, password);
  
@@ -90,9 +95,12 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_JPEG;
-  config.frame_size = FRAMESIZE_VGA;  
+  config.frame_size = FRAMESIZE_SVGA;  
   config.jpeg_quality = 4;
   config.fb_count = 1;
+
+   //init with high specs to pre-allocate larger buffers
+  
    
   esp_err_t err = esp_camera_init(&config); //Inicialização da câmera
 
@@ -108,7 +116,7 @@ void setup() {
   //Inicializa o objeto de decodificação
   qr.init(&cam);
   sensor_t *s = cam.sensor();
-  s->set_framesize(s, FRAMESIZE_CIF);
+  s->set_framesize(s, FRAMESIZE_SVGA);
   s->set_whitebal(s, true);
    
   Serial.println();
@@ -118,7 +126,6 @@ void setup() {
  
 void loop()
 {
-  digitalWrite(flash, HIGH);
   unsigned long pv_time = millis();
   camera_fb_t *fb = cam.capture(); //Captura a imagem
   if (!fb)
@@ -155,6 +162,14 @@ void loop()
         String leitura = "Código QR Lido: " + res.payload; //Variável para mostrar os dados contidos no QR Code
         Serial.println();
         Serial.println(leitura);  //Mostra os dados no monitor serial
+        digitalWrite(flash, HIGH);
+        delay(300);
+        digitalWrite(flash, LOW);
+        delay(300);
+        digitalWrite(flash, HIGH);
+        delay(300);
+        digitalWrite(flash, LOW);
+        delay(300);
 
         //Inicia o cliente HTTP. <- Resquest web.
         HTTPClient http;
@@ -202,12 +217,9 @@ void loop()
        trava = 0;
        Serial.println();
        Serial.println("Aguardando código"); 
-       digitalWrite(flash, LOW);
-        digitalWrite(rele, LOW);
-        cam.clearMemory(image_rgb); //Apaga imagem para receber uma nova imagem
-        delay(1000);
      }
             
     }
-  
+  cam.clearMemory(image_rgb); //Apaga imagem para receber uma nova imagem
+  digitalWrite(rele, LOW);
 }
