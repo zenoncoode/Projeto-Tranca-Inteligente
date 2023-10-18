@@ -40,7 +40,7 @@ ESPino32QRCode qr; //Objeto para decoficação da imagem
  
 //Variável para limitar o print no monitor serial se caso o QR Code ainda estiver na frente da câmera
 int trava;
-int rele = 13;
+int rele = 2;
 
  
 void setup() {
@@ -48,8 +48,8 @@ void setup() {
   Serial.begin(115200);
 
   pinMode(rele, OUTPUT);
-  digitalWrite(rele, LOW);
-  pinMode(rele, INPUT_PULLUP);
+  digitalWrite(rele, HIGH);
+  //pinMode(rele, INPUT_PULLUP);
 
   digitalWrite(flash, LOW); //Turn on
   
@@ -198,8 +198,19 @@ void loop()
             //If lista no servidor retornar mais de 0 registros. (Quando 0 então não existe TOKEN no servidor.)
             if(array.size() > 0){
               Serial.println("Usuario existe.");
-              digitalWrite(rele, HIGH);
-              delay(5000);
+              digitalWrite(rele, LOW);
+              delay(100);
+			  digitalWrite(rele, HIGH);
+			  delay(100);
+              digitalWrite(rele, LOW);
+              delay(100);
+			  digitalWrite(rele, HIGH);
+			  delay(100);
+              digitalWrite(rele, LOW);
+              delay(100);
+			  digitalWrite(rele, HIGH);
+			  delay(100);
+
               //abrir_porta();
             }
             else{
