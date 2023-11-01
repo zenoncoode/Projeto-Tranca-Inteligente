@@ -1,4 +1,7 @@
 //Bibliotecas utilizadas
+// # Arduino: Al Thinker EPS32-CAM
+// boards manager: esp32 v1.0.6
+// Libary ArduinoJson6 ESPIno32CAM 
 #include "ESPino32CAM.h"
 #include "ESPino32CAM_QRCode.h"
 #include <WiFi.h>
@@ -6,11 +9,11 @@
 #include <ArduinoJson.h>
 
 //Config do wifi
-const char* ssid = "MASSINHA DE EVA";
-const char* password =  "senhaarea2020";
+const char* ssid = "FatecAlunos";
+const char* password =  "f@t3calunos73";
 
 //URL servidor.
-String serverName = "http://192.168.1.104:3000/users?token=";
+String serverName = "http://172.16.7.224:3000/users?token=";
 
 //Objetos de camera
 ESPino32CAM cam;   //Objeto para captura de imagem
@@ -40,7 +43,7 @@ ESPino32QRCode qr; //Objeto para decoficação da imagem
  
 //Variável para limitar o print no monitor serial se caso o QR Code ainda estiver na frente da câmera
 int trava;
-int rele = 2;
+int rele = 12;
 
  
 void setup() {
@@ -232,5 +235,5 @@ void loop()
             
     }
   cam.clearMemory(image_rgb); //Apaga imagem para receber uma nova imagem
-  digitalWrite(rele, LOW);
+  digitalWrite(rele, HIGH);
 }
