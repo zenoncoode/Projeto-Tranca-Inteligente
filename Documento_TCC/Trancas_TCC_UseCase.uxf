@@ -1,0 +1,32 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>// Descomente a seguinte linha para alterar o tamanho da fonte e a fonte:
+// tamanho da fonte=14
+// fontfamily=SansSerif //possível: SansSerif,Serif,Monospaced
+
+
+////////////////////////////////////////////////// ////////////////////////////////////////////
+// Bem-vindo ao UMLet!
+//
+// Clique duas vezes nos elementos para adicioná-los ao diagrama ou para copiá-los
+// Editar elementos modificando o texto neste painel
+// Segure Ctrl para selecionar vários elementos
+// Use Ctrl+mouse para selecionar via laço
+//
+// Use +/- ou Ctrl+roda do mouse para ampliar
+// Arraste toda uma relação em seu ícone quadrado central
+//
+// Pressione Ctrl+C para copiar todo o diagrama para a área de transferência do sistema (depois basta colá-lo, por exemplo, no Word)
+// Edite os arquivos no diretório "palettes" para criar suas próprias paletas de elementos
+//
+// Selecione "Custom Elements &gt; New..." para criar novos tipos de elementos
+////////////////////////////////////////////////// ////////////////////////////////////////////
+
+
+// Este texto será armazenado com cada diagrama; use-o para anotações.</help_text><element><id>UMLActor</id><coordinates><x>72</x><y>171</y><w>90</w><h>99</h></coordinates><panel_attributes>Administrador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>261</x><y>162</y><w>126</w><h>81</h></coordinates><panel_attributes>Gerar Token 
+QRCode</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>468</x><y>153</y><w>126</w><h>108</h></coordinates><panel_attributes>Usuário para Acessar
+Estabelecimento</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>180</y><w>144</w><h>36</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>252</x><y>54</y><w>144</w><h>90</h></coordinates><panel_attributes>Emcaminhar
+para o Destinatário</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>387</x><y>90</y><w>135</w><h>117</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;130;110</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>252</x><y>279</y><w>153</w><h>72</h></coordinates><panel_attributes>Utilizar QRCode
+na camera da porta</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>180</y><w>126</w><h>144</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;140;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>90</y><w>135</w><h>126</h></coordinates><panel_attributes></panel_attributes><additional_attributes>130;10;10;120</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>396</x><y>414</y><w>126</w><h>63</h></coordinates><panel_attributes>Abrir Porta
+do Estabelecimento</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>351</x><y>342</y><w>126</w><h>90</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>120;80;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>180</x><y>414</y><w>108</w><h>63</h></coordinates><panel_attributes>Acesso ao
+Não Permitido</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>342</y><w>99</w><h>90</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;80;90;10</additional_attributes></element></diagram>
