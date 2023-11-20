@@ -9,11 +9,11 @@
 #include <ArduinoJson.h>
 
 //Config do wifi
-const char* ssid = "FatecAlunos";
-const char* password =  "f@t3calunos73";
+const char* ssid = "AcessRocketTail";
+const char* password =  "Rede.Com";
 
 //URL servidor.
-String serverName = "http://172.16.7.224:3000/users?token=";
+String serverName = "http://10.10.10.100:3000/users?token=";
 
 //Objetos de camera
 ESPino32CAM cam;   //Objeto para captura de imagem
